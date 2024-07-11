@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>PageMonitor.SqlDatabase</Name>
+    <Name>HomeBudget.SqlDatabase</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{5e04bf8e-05eb-4eac-967c-7afe28019c48}</ProjectGuid>
@@ -11,8 +11,8 @@
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>PageMonitor.SqlDatabase</RootNamespace>
-    <AssemblyName>PageMonitor.SqlDatabase</AssemblyName>
+    <RootNamespace>HomeBudget.SqlDatabase</RootNamespace>
+    <AssemblyName>HomeBudget.SqlDatabase</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
