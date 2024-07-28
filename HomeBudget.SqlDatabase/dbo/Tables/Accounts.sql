@@ -4,4 +4,4 @@
     [Name] NVARCHAR(50) NOT NULL, 
     [CreateDate] DATETIMEOFFSET NOT NULL,
     CONSTRAINT [PK_Accounts] PRIMARY KEY CLUSTERED ([Id] ASC)
-)
+);
