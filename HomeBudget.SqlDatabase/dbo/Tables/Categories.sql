@@ -17,3 +17,7 @@ GO
 CREATE UNIQUE INDEX [UQ_Categories_Name_AccountId] 
 ON [dbo].[Categories] ([Name], [AccountId])
 WHERE [IsDeleted] = 0;
+
+GO
+CREATE INDEX [IX_Categories_IsDeleted]
+ON [dbo].[Categories] ([IsDeleted]);
