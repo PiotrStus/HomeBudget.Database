@@ -10,7 +10,7 @@
 
 
 GO
-CREATE INDEX [IX_YearBudgets_AccountId] ON [dbo].[YearBudgets] ([AccountId])
+CREATE INDEX [IX_YearBudgets_AccountId] ON [dbo].[YearBudgets] ([AccountId]);
 
 GO
 CREATE UNIQUE INDEX [UX_YearBudgets_AccountId_Year] ON [dbo].[YearBudgets] ([AccountId], [Year])

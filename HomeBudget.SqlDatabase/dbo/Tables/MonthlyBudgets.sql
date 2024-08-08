@@ -10,3 +10,6 @@
 
 GO
 CREATE INDEX [IX_MonthlyBudgets_YearBudgetId] ON [dbo].[MonthlyBudgets] ([YearBudgetId]);
+
+GO
+CREATE INDEX [IX_MonthlyBudgets_Month] ON [dbo].[MonthlyBudgets] ([Month]);

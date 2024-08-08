@@ -3,7 +3,7 @@
 	[Id]				INT				IDENTITY(1,1) NOT NULL,
 	[Name]				NVARCHAR(100)	NOT NULL,
 	[Date]				DATETIMEOFFSET  NOT NULL,
-	[CategoryId]		INT				DEFAULT NULL,
+	[CategoryId]		INT				CONSTRAINT [CategoryId] DEFAULT NULL,
 	[Amount]			DECIMAL(8,2)    NOT NULL,
 	[AccountId]			INT				NOT NULL,
 	CONSTRAINT [PK_Transactions] PRIMARY KEY CLUSTERED ([Id]),
