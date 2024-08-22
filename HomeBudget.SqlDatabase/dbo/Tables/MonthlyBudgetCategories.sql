@@ -13,4 +13,7 @@ GO
 CREATE INDEX [IX_MonthlyBudgetCategories_MonthlyBudgetId] ON [dbo].[MonthlyBudgetCategories] ([MonthlyBudgetId]);
 
 GO
-CREATE INDEX [IX_MonthlyBudgetCategories_CategoryId] ON [dbo].[MonthlyBudgetCategories] ([CategoryId])
+CREATE INDEX [IX_MonthlyBudgetCategories_CategoryId] ON [dbo].[MonthlyBudgetCategories] ([CategoryId]);
+
+GO
+CREATE UNIQUE INDEX [UX_MonthlyBudgetCategories_MonthlyBudgetId_CategoryId] ON [dbo].[MonthlyBudgetCategories] ([MonthlyBudgetId], [CategoryId]);

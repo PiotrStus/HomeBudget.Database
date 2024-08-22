@@ -14,4 +14,4 @@
 GO
 
 -- indeks na email, dzieki czemu wyszukiwanie uzytkownikow bedzie szybsze
-CREATE unique INDEX [UQ_Users_Email] ON [dbo].[Users] ([Email])
+CREATE UNIQUE INDEX [UQ_Users_Email] ON [dbo].[Users] ([Email])
