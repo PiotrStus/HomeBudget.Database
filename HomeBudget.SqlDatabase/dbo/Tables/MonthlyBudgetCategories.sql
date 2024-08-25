@@ -4,6 +4,7 @@
 	[Amount]			DECIMAL(8,2)	NOT NULL,
 	[MonthlyBudgetId]	INT				NOT NULL,
 	[CategoryId]		INT				NOT NULL,
+
 	CONSTRAINT [PK_MonthlyBudgetCategories] PRIMARY KEY CLUSTERED ([Id] ASC),
 	CONSTRAINT [FK_MonthlyBudgetCategories_MonthlyBudgets] FOREIGN KEY ([MonthlyBudgetId]) REFERENCES [dbo].[MonthlyBudgets] ([Id]) ON DELETE CASCADE,
 	CONSTRAINT [FK_MonthlyBudgetCategories_Categories] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Categories] ([Id]) ON DELETE CASCADE
