@@ -5,7 +5,7 @@
 	[CategoryType]			INT				 NOT NULL,
 	[IsDraft]				BIT				 NOT NULL CONSTRAINT [DF_IsDraft] DEFAULT 1,
 	[AccountId]				INT		    	 NOT NULL,
-	[IsDeleted]				BIT				 NOT NULL CONSTRAINT [DF_IsDeleted] DEFAULT 0,
+	[IsDeleted]				BIT				 NOT NULL CONSTRAINT [DF_Categories_IsDeleted] DEFAULT 0,
 	CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED ([Id] ASC),
 	CONSTRAINT [FK_Categories_Accounts] FOREIGN KEY ([AccountId]) REFERENCES [dbo].[Accounts] ([Id])
 );
