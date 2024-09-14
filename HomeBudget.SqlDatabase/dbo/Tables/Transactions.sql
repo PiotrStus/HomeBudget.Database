@@ -17,4 +17,17 @@ CREATE INDEX [IX_Transactions_IsDeleted]
 ON [dbo].[Transactions] ([IsDeleted]);
 
 GO
-CREATE INDEX [IX_Transactions_AccountId] ON [dbo].[AccountUsers] ([AccountId]);
+CREATE INDEX [IX_Transactions_AccountId] 
+ON [dbo].[AccountUsers] ([AccountId]);
+
+GO
+CREATE INDEX [IX_Transactions_Date]
+ON [dbo].[Transactions] ([Date]);
+
+GO
+CREATE INDEX [IX_Transactions_CategoryId]
+ON [dbo].[Transactions] ([CategoryId]);
+
+GO
+CREATE INDEX [IX_Transactions_Amount]
+ON [dbo].[Transactions] ([Amount]);
