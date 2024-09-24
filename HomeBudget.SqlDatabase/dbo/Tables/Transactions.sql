@@ -3,6 +3,7 @@
 	[Id]				INT				IDENTITY(1,1) NOT NULL,
 	[Name]				NVARCHAR(100)	NOT NULL,
 	[Date]				DATETIMEOFFSET  NOT NULL,
+	[CreationDate]		DATETIMEOFFSET	NOT NULL CONSTRAINT [CreationDate] DEFAULT SYSDATETIMEOFFSET(),
 	[CategoryId]		INT				CONSTRAINT [CategoryId] DEFAULT NULL,
 	[IsDeleted]			BIT				NOT NULL CONSTRAINT [DF_Transactions_IsDeleted] DEFAULT 0,
 	[Amount]			DECIMAL(8,2)    NOT NULL,
@@ -23,6 +24,10 @@ ON [dbo].[AccountUsers] ([AccountId]);
 GO
 CREATE INDEX [IX_Transactions_Date]
 ON [dbo].[Transactions] ([Date]);
+
+GO
+CREATE INDEX [IX_Transactions_CreationDate]
+ON [dbo].[Transactions] ([CreationDate]);
 
 GO
 CREATE INDEX [IX_Transactions_CategoryId]
