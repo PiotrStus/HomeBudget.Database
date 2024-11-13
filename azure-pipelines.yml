@@ -16,3 +16,15 @@ steps:
     msbuildArchitecture: 'x64'
     configuration: 'Release'
     clean: true
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(778c50e7-5035-4ab8-a566-dbee85236116)'
+    AuthenticationType: 'server'
+    ServerName: 'homebudget.database.windows.net'
+    DatabaseName: 'homebudget'
+    SqlUsername: 'deploy'
+    SqlPassword: '&(deploy_pass)'
+    deployType: 'DacpacTask'
+    DeploymentAction: 'Publish'
+    DacpacFile: 'HomeBudget.SqlDatabase\bin\Release\HomeBudget.SqlDatabase.dacpac'
+    IpDetectionMethod: 'AutoDetect'
